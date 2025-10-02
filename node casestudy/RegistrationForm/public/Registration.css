@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100wh;
+    height: 100vh;
+}
+.main{
+    background-color: burlywood;
+    width: 100%;
+    height: 650px;
+}
+.container{
+    width: 500px;
+    height: 600px;
+    padding-top: 20px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 20px; */
+}
+input{
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    width: 70%;
+}
+.data{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    direction: center;
+    padding-top: 40px;
+    padding-left: 23%;
+}
+select{
+    height: 40px;
+    width: 400px;
+    border-radius: 5px;
+    width: 70%;
+}
+.but{
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
+    color: white;
+    background-color: green;
+    font-size: large;
+}

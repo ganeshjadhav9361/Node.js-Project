@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee App</title>
+
+    <link rel="stylesheet" href="Calsal.css" />
+</head>
+<body>
+    <h2> Calculate Salary</h2>
+    <form name="frm" action="/save" method="POST">
+        <input type="text" name="name" placeholder="Enter name" /><br><br>
+        <input type="text" name="email" placeholder="Enter email" /><br><br>
+        <input type="number" name="contact" placeholder="Enter contact" /><br><br>
+        <input type="number" name="sal" placeholder="Enter salary" /><br><br>
+        <button type="submit"> Calculate Salary</button>
+    </form>
+        <% if (typeof name !== 'undefined') { %>
+        <h2> Name <%=name%></h2>
+        <h2> Email <%=email%></h2>
+        <h2> Contact <%=contact%></h2>
+        <h2> Basic Salary <%=sal%></h2>
+        <h2> DA Amount <%=da%></h2>
+        <h2> HRA Amount <%=hra%></h2>
+        <h2> Total Salary <%=total%></h2>
+        <% } %>
+</body>
+</html>
