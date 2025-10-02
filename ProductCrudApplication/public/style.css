@@ -1,0 +1,26 @@
+.control{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+/* style.css */
+
+body {
+  background-image: url('images/prodBackjImag2.jpg'); 
+  background-size: cover;                
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;                      
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+h1, .text-white {
+  text-shadow: 4px 4px 4px #000;
+}
+
