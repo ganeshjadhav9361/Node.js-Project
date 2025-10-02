@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Registration Page</title>
+        <link rel="stylesheet" href="Registration.css" />
+        <script type="text/javascript" src="ValidName.js" ></script>
+        <script type="text/javascript" src="ValidEmail.js" ></script>
+        <script type="text/javascript" src="ValidContact.js" ></script>
+        <script type="text/javascript" src="ValidDOB.js" ></script>
+        <script type="text/javascript" src="FormValidator.js"></script>
+        <!-- <script type="text/javascript" src="ValidForm.js"></script> -->
+    </head>
+
+    <body>
+        <div class="main">
+            <center>
+        <div class="container">
+        <form name='frm' action='/save' method='POST' 
+            onsubmit="validateForm(event)">
+
+        <h1> Registration Form</h1>
+        <div class="data">
+            <input id="n" type="text" name="name" value="" placeholder="Enter name" 
+                onkeyup="ValidName(this.value)"/>
+            <span id="s1"></span>
+            <input id="e" type="text" name="email" value="" placeholder="Enter email"
+                onkeyup="ValidEmail(this.value)"/>
+            <span id="s2"></span>
+            <input id="c" type="number" name="contact" value="" placeholder="Enter contact"
+                onkeyup="ValidContact(this.value)"/>
+            <span id="s3"></span>
+            <select name="Qualification" >
+                <option> Select Qualification</option>
+                <option> BTECH</option>
+                <option> MCA</option>
+                <option> BCA</option>
+                <option> MTECH</option>
+                <option> BSC</option>
+                <option> BE</option>
+            </select>
+            <input id="d" type="date" name="DOB" value="" placeholder="select DOB"
+                onchange="ValidDOB(this.value)"/>
+            <span id="s5"></span>
+             <select name="University" >
+                <option> Select University</option>
+                <option> Solapur University</option>
+                <option> Shivaji University</option>
+                <option> Pune</option>
+                <option> Mumbai</option>
+             </select>
+             <input class="but" type="submit" name="sub" value="Add new student" />
+             </div>
+        </form>
+        </div>
+        </center>
+        </div>
+    </body>
+</html>
