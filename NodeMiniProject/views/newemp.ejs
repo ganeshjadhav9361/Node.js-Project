@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Employee</title>
+
+    <script type="text/javascript" src="ajax.js"></script>
+</head>
+<body>
+    <%- include("home.ejs") %>
+    <div class="container bg-dark p-5 ">
+        <form name="frm" action="/saveemp" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" value="" 
+            placeholder="Enter Name"/>
+    </div>
+    <div class="form-group">
+        <input type="text" id="uemail" class="form-control" name="email" value="" 
+            placeholder="Enter Email" onblur="checkEmailExistance(this.value)"/>
+            <lable class="text-white" id="labelmsg"></lable>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" name="contact" value="" 
+            placeholder="Enter Contact"/>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="sal" value="" 
+            placeholder="Enter Salary"/>
+    </div>
+    <div class="form-group">
+        <input type="file" class="form-control" name="photo" value=""/>
+    </div>
+    <div class="form-group">
+        <select name="deptid" class="form-control">
+            <option>Department Select</option>
+            <%
+                deptList.forEach((deptData,index)=>{
+            %>
+            <option value="<%=deptData.deptid%>"><%=deptData.deptname%>
+
+            </option>
+            <%
+                });
+            %>
+            
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="form-control control" name="s1" value="Add New Employee"/>
+    </div>
+    <%
+            if(msg.length!=0){
+        %>
+         <div class="alert alert-primary" role="alert">
+            <%=msg%>
+        </div>
+        <%
+        }
+        %>
+    </form>
+    </div>
+</body>
+</html>

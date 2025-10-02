@@ -1,0 +1,43 @@
+Microsoft Windows [Version 10.0.19045.4894]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>cd C:\Node js\NodeMiniProject
+
+C:\Node js\NodeMiniProject>npm init -y
+Wrote to C:\Node js\NodeMiniProject\package.json:
+
+{
+  "name": "nodeminiproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+
+
+C:\Node js\NodeMiniProject>npm i express ejs body-parser mysql2 dotenv
+
+added 95 packages, and audited 96 packages in 8s
+
+18 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Node js\NodeMiniProject>npm i
+
+up to date, audited 96 packages in 2s
+
+18 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Node js\NodeMiniProject>

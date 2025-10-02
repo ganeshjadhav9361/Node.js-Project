@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="ajax.js"></script>
+</head>
+<body>
+    <%- include("home.ejs") %>
+
+    <div class="container bg-dark p-5">
+        <div class="form-group">
+           <div class="form-group">
+        <select id="did" name="deptid" class="form-control" onchange="getElementByDept()">
+            <option value="0">Department Select</option>
+            <%
+                deptList.forEach((deptData,index)=>{
+            %>
+            <option value="<%=deptData.deptid%>"><%=deptData.deptname%>
+
+            </option>
+            <%
+                });
+            %>
+            
+        </select>
+
+        <table class="table bg-white mt-5">
+            <thead>
+                <tr>
+                    <th>SR NO</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>CONTACT</th>
+                    <th>PHOTO</th>
+                    <th>DEPARTMENT</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+                    <!-- <a href="/delemp">DELETE</a> -->
+                </tr>
+            </thead>
+
+            <tbody id="tblBody">
+                
+            </tbody>
+        </table>
+    </div>
+        </div>
+</body>
+</html>
