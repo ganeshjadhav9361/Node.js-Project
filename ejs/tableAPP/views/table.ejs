@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table App</title>
+</head>
+<body>
+    <form name="frm" action="/printtab" method="POST">
+        <input type="text" name="num" value="" />
+        <br></br>
+        <input type="submit" name="but" value="Print Table" />
+    </form>
+
+    <table>
+        <tr><th>Iteration</th><th>X</th><th>num</th><th>result</th></tr>
+        <%
+        if(no!=0)
+        {
+            for(let i=1;i<=10;i++)
+            {
+        %>
+                <tr><td><%=i%></td><td>x</td><td><%=no%></td><td>=</td>
+                <td><%=i*no%></td></tr>
+
+        <%
+            }
+        }
+
+        %>
+
+    </table>
+</body>
+</html>
